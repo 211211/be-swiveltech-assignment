@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "2ff247fb-5496-4db8-bbdc-ba5a5ccacd84",
+		"name": "be-swiveltech-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19431616"
+	},
+	"item": [
+		{
+			"name": "CREATE EMPLOYEE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Henri66\",\n        \"lastName\": \"Rodriguez\",\n        \"email\": \"Darrin_Rippin@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET EMPLOYEE DETAIL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Henri66\",\n        \"lastName\": \"Rodriguez\",\n        \"email\": \"Darrin_Rippin@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/employee/6334704d0bc852645aba10ae",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						"6334704d0bc852645aba10ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH EMPLOYEE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:4000/employee?offset=0&limit=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"employee"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE EMPLOYEE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Henri66\",\n        \"lastName\": \"Rodriguez\",\n        \"email\": \"Darrin_Rippin@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/employee/6334704d0bc852645aba10ae",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						"6334704d0bc852645aba10ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE EMPLOYEE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"hon 6 char11\",\n        \"lastName\": \"hon 6 char\",\n        \"email\": \"quan@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/employee/6334704d0bc852645aba10ae",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						"6334704d0bc852645aba10ae"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
