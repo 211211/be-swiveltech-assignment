@@ -49,9 +49,12 @@ export class EmployeeRepository implements IEmployeeRepository {
       phoneNumber: createEmployeeDto.phoneNumber,
       gender: createEmployeeDto.gender,
       status: USER_STATUS.ACTIVE,
+      photo: createEmployeeDto.photo ?? '',
       createdAt: moment().valueOf(),
       updatedAt: moment().valueOf(),
     });
+
+    console.info({ createEmployeeDto });
 
     return employee.save();
   }
@@ -68,6 +71,7 @@ export class EmployeeRepository implements IEmployeeRepository {
       email: updateEmployeeDto.email,
       phoneNumber: updateEmployeeDto.phoneNumber,
       gender: updateEmployeeDto.gender,
+      photo: updateEmployeeDto.photo ?? '',
       updatedAt: moment().valueOf(),
     });
   }

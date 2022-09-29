@@ -2,7 +2,10 @@ import {
   IsEmail,
   IsEnum,
   IsNotEmpty,
+  IsOptional,
   IsPhoneNumber,
+  IsString,
+  IsUrl,
   MaxLength,
   MinLength,
 } from 'class-validator';
@@ -43,4 +46,10 @@ export class DetailEmployeeDto {
   @Prop()
   @IsEnum(GENDER_OPTIONS)
   gender: GENDER_OPTIONS;
+
+  @ApiProperty({ example: 'https://randomuser.me/api/portraits/men/92.jpg' })
+  @IsOptional()
+  @IsString()
+  @IsUrl()
+  photo: string;
 }

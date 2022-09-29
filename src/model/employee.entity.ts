@@ -2,7 +2,10 @@ import {
   IsEmail,
   IsEnum,
   IsNotEmpty,
+  IsOptional,
   IsPhoneNumber,
+  IsString,
+  IsUrl,
   MinLength,
 } from 'class-validator';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
@@ -60,6 +63,12 @@ export class EmployeeEntity {
   @Prop()
   @IsEnum(USER_STATUS)
   status: USER_STATUS; // 0: inactive, 1: active
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  @IsUrl()
+  photo: string;
 
   @ApiProperty()
   @Prop()
