@@ -5,7 +5,7 @@ import {
 } from '../model/employee.entity';
 import { Injectable } from '@nestjs/common';
 import { Connection, FilterQuery, Model } from 'mongoose';
-import * as moment from 'moment';
+import moment from 'moment';
 import { InjectConnection, InjectModel } from '@nestjs/mongoose';
 import { CreateEmployeeDto } from 'src/core/employee/dto/create-employee.dto';
 import { UpdateEmployeeDto } from 'src/core/employee/dto/update-employee.dto';
@@ -53,8 +53,6 @@ export class EmployeeRepository implements IEmployeeRepository {
       createdAt: moment().valueOf(),
       updatedAt: moment().valueOf(),
     });
-
-    console.info({ createEmployeeDto });
 
     return employee.save();
   }

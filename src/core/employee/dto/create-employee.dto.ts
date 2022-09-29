@@ -3,7 +3,6 @@ import {
   IsEnum,
   IsNotEmpty,
   IsOptional,
-  IsPhoneNumber,
   IsString,
   IsUrl,
   MaxLength,
@@ -12,6 +11,7 @@ import {
 
 import { ApiProperty } from '@nestjs/swagger';
 import { GENDER_OPTIONS } from 'src/model/employee.entity';
+import { IsSriLankaPhoneNumber } from 'src/validators';
 import { Prop } from '@nestjs/mongoose';
 
 export class CreateEmployeeDto {
@@ -34,9 +34,9 @@ export class CreateEmployeeDto {
   @IsEmail()
   email: string;
 
-  @ApiProperty({ example: '+84934334343' })
+  @ApiProperty({ example: '+94934334343' })
   @Prop({ required: true })
-  @IsPhoneNumber()
+  @IsSriLankaPhoneNumber('LK')
   phoneNumber: string;
 
   @ApiProperty({ example: 0 })
