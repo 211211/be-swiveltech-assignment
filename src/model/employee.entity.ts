@@ -66,6 +66,7 @@ export class EmployeeEntity {
 
   @ApiProperty()
   @IsOptional()
+  @Prop()
   @IsString()
   @IsUrl()
   photo: string;
