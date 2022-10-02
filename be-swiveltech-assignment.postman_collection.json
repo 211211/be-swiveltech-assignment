@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"firstName\": \"Henri66\",\n        \"lastName\": \"Rodriguez\",\n        \"email\": \"Darrin_Rippin@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 1\n    }",
+					"raw": "{\n    \"firstName\": \"Henri666\",\n    \"lastName\": \"Rodr4iguez\",\n    \"email\": \"Darrin_Rippin@gmail.com\",\n    \"phoneNumber\": \"+94771277218\",\n    \"gender\": 1,\n    \"photo\": \"https://randomuser.me/api/portraits/men/92.jpg\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,23 +39,11 @@
 		},
 		{
 			"name": "GET EMPLOYEE DETAIL",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n        \"firstName\": \"Henri66\",\n        \"lastName\": \"Rodriguez\",\n        \"email\": \"Darrin_Rippin@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 1\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://127.0.0.1:4000/employee/6334704d0bc852645aba10ae",
+					"raw": "http://127.0.0.1:4000/employee/6339d027203717263b00dac2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -66,7 +54,7 @@
 					"port": "4000",
 					"path": [
 						"employee",
-						"6334704d0bc852645aba10ae"
+						"6339d027203717263b00dac2"
 					]
 				}
 			},
@@ -109,15 +97,6 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n        \"firstName\": \"Henri66\",\n        \"lastName\": \"Rodriguez\",\n        \"email\": \"Darrin_Rippin@gmail.com\",\n        \"phoneNumber\": \"+94771277218\",\n        \"gender\": 1\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "http://127.0.0.1:4000/employee/6334704d0bc852645aba10ae",
 					"protocol": "http",
