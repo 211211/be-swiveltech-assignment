@@ -10,8 +10,8 @@ import {
 } from 'class-validator';
 
 import { ApiProperty } from '@nestjs/swagger';
-import { GENDER_OPTIONS } from 'src/model/employee.entity';
-import { IsSriLankaPhoneNumber } from 'src/validators';
+import { GENDER_OPTIONS } from '../../../model/employee.entity';
+import { IsSriLankaPhoneNumber } from '../../../validators';
 import { Prop } from '@nestjs/mongoose';
 
 export class CreateEmployeeDto {

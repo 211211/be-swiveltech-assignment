@@ -7,8 +7,8 @@ import { Injectable } from '@nestjs/common';
 import { Connection, FilterQuery, Model } from 'mongoose';
 import moment from 'moment';
 import { InjectConnection, InjectModel } from '@nestjs/mongoose';
-import { CreateEmployeeDto } from 'src/core/employee/dto/create-employee.dto';
-import { UpdateEmployeeDto } from 'src/core/employee/dto/update-employee.dto';
+import { CreateEmployeeDto } from '../core/employee/dto/create-employee.dto';
+import { UpdateEmployeeDto } from '../core/employee/dto/update-employee.dto';
 
 export interface IEmployeeRepository {
   createEmployee(createEmployeeDto: CreateEmployeeDto): Promise<any>;

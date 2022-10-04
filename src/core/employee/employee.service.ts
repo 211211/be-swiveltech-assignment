@@ -3,7 +3,7 @@ import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { FilterQuery } from 'mongoose';
 import { EmployeeEntity, USER_STATUS } from '../../model/employee.entity';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
-import { EmployeeRepository } from 'src/repository/employee.repository';
+import { EmployeeRepository } from '../../repository/employee.repository';
 import { DetailEmployeeDto } from './dto/detail-employee.dto';
 
 export interface IEmployeeService {
@@ -43,7 +43,7 @@ export class EmployeeService implements IEmployeeService {
     });
   }
 
-  async findAll(offset: number, limit: number): Promise<any> {
+  async findAll(offset = 0, limit = 10): Promise<any> {
     const conditions: FilterQuery<EmployeeEntity> = {
       status: USER_STATUS.ACTIVE,
     };
