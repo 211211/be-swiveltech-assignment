@@ -40,7 +40,7 @@ export function IsSriLankaPhoneNumber(
         // specify custom error message
         defaultMessage: buildMessage(
           (eachPrefix) =>
-            `${eachPrefix} $property must be a valid phone number in the specified region`,
+            `${eachPrefix} $property must be a valid phone number in Sri Lanka`,
           validationOptions,
         ),
       },
