@@ -1,5 +1,6 @@
 import AppConfig, { CONFIG_APP } from './config/app';
 import { ConfigService, ConfigType } from '@nestjs/config';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import { AppModule } from './app.module';
 import { NestFactory } from '@nestjs/core';
@@ -22,12 +23,20 @@ async function bootstrap() {
   );
 
   app.enableCors({
-    origin: ['http://localhost:3000'],
+    origin: process.env.WHITE_LIST_DOMAINS.split(','),
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   });
 
-  // app.setGlobalPrefix('api');
+  const config = new DocumentBuilder()
+    .setTitle('Employee APIs example')
+    .setDescription('Employee APIs example')
+    .setVersion('1.0')
+    .addTag('employee')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+
   await app.listen(appConfig?.port ?? 4000, appConfig?.host ?? 'localhost');
   console.debug(`App is listening on ${appConfig?.host}:${appConfig?.port}`);
 }
